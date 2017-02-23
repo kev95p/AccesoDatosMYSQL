@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AccesoDatosMYSQL;
 using MySql.Data.MySqlClient;
-
+using System.Reflection;
 
 namespace ConsoleApplication1
 {
@@ -13,19 +13,19 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            
-           MySqlCommand cmd =  DBConexion.Connection.CreateCommand();
-           cmd.CommandText = "select * from aeropuertos";
-           MySqlDataReader data =  cmd.ExecuteReader();
-           if (data.HasRows)
-           {
-               while (data.Read())
-               {
-                   Console.WriteLine("{0}\t{1}", data.GetInt32(0),
-                      data.GetString(1));
-               }
-           }
+             Usuarios usuario = new Usuarios();
+             usuario.Idusuario = "kev95p";
+             usuario.Nombres = "KEVIN";
+             usuario.Apellidos = "Pleitez";
+             usuario.Email = "pleitez95geova@gmail.com";
+            usuario.Telefono = "1239393";
+            usuario.Clave = "admin";
+             
+            /*Paises p = new Paises();
+            p.Pais = "El Salvador";*/
 
+            EntityQueryBuild ent = new EntityQueryBuild(usuario);     
+            Console.WriteLine(ent.getSelect("kev95p"));
            Console.ReadKey();
            
         }

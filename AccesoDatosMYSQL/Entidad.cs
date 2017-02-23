@@ -8,7 +8,7 @@ namespace AccesoDatosMYSQL
 {
     public abstract class Entidad
     {
-        public bool autoincrement = false;
-        public string primary_key = "id";
+        public bool AUTOINCREMENT = false;
+        public string PRIMARY_KEY = "id";
     }
 }
