@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatosMYSQL", "AccesoDatosMYSQL\AccesoDatosMYSQL.csproj", "{FB2ED020-DF59-44E4-A24F-061ABB42F58A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{4EA6C2F6-7C23-43A9-8CA7-A80CF1F8599F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebasConsola", "ConsoleApplication1\PruebasConsola.csproj", "{4EA6C2F6-7C23-43A9-8CA7-A80CF1F8599F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
