@@ -7,8 +7,8 @@
     <ProjectGuid>{FB2ED020-DF59-44E4-A24F-061ABB42F58A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AccesoDatosMYSQL</RootNamespace>
-    <AssemblyName>AccesoDatosMYSQL</AssemblyName>
+    <RootNamespace>DataAccess</RootNamespace>
+    <AssemblyName>DataAccess</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

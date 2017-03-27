@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading;
 using MySql.Data.MySqlClient;
 
-namespace AccesoDatosMYSQL
+namespace DataAccess
 {
     public sealed class DBConexion
     {
