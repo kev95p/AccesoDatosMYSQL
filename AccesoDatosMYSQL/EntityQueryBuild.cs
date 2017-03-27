@@ -122,7 +122,32 @@ namespace AccesoDatosMYSQL
             return sql;
         }
 
+        public string getInsert()
+        {
+            string sql = "insert into " + NombreEntidad.ToLower() + "(" + getFields() + ") values (" + getValues() + ")";
+            return sql;
+        }
 
+        public string getUpdate(string id)
+        {
+            string sql = "update " + NombreEntidad.ToLower() + " set ";
+            string[] fields = getFields().Split(',');
+            string[] values = getValues().Split(',');
+            for(int i = 0; i < fields.Length; i++)
+            {
+                sql += fields[i] + "=" + values[i]+" ";
+            }
+            sql = sql.Remove(sql.Length - 1);
+
+            sql += " where " + primary_key.ToString().ToLower() + " = '" + id + "'";
+            return sql;
+        }
+
+        public string getDelete(string id)
+        {
+            string sql = "delete from " + NombreEntidad.ToLower() + " where " + primary_key.ToString().ToLower() + " = '" + id + "'";
+            return sql;
+        }
     }
 
 }

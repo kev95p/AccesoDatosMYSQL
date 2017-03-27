@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AccesoDatosMYSQL;
 
-namespace ConsoleApplication1
+namespace Model.Tablas
 {
     
     public class Paises : Entidad
@@ -25,35 +24,12 @@ namespace ConsoleApplication1
             this.Pais = pais; 
         }
 
-        public int Idpais
-        {
-            get
-            {
-                return idpais;
-            }
-
-            set
-            {
-                idpais = value;
-            }
-        }
-
-        public string Pais
-        {
-            get
-            {
-                return pais;
-            }
-
-            set
-            {
-                pais = value;
-            }
-        }
+        public int Idpais { get => idpais; set => idpais = value; }
+        public string Pais { get => pais; set => pais = value; }
 
         private void init()
         {
-            PRIMARY_KEY = "idpais";
+            PRIMARY_KEY = "Idpais";
             AUTOINCREMENT = true;
         }
 

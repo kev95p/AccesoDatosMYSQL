@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AccesoDatosMYSQL
+namespace Model
 {
     public abstract class Entidad
     {
