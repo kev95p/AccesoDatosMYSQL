@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using AccesoDatosMYSQL;
 using MySql.Data.MySqlClient;
 using System.Reflection;
+using System.Data;
+using System.Data.Odbc;
 
 namespace ConsoleApplication1
 {
@@ -13,21 +15,13 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-             Usuarios usuario = new Usuarios();
-             usuario.Idusuario = "kev95p";
-             usuario.Nombres = "KEVIN";
-             usuario.Apellidos = "Pleitez";
-             usuario.Email = "pleitez95geova@gmail.com";
-            usuario.Telefono = "1239393";
-            usuario.Clave = "admin";
-             
-            /*Paises p = new Paises();
-            p.Pais = "El Salvador";*/
-
-            EntityQueryBuild ent = new EntityQueryBuild(usuario);     
-            Console.WriteLine(ent.getSelect("kev95p"));
-           Console.ReadKey();
            
+            string ConnStr = "Server=127.0.0.1;Database=aerolinea;uid=root;pwd=admin";
+            OdbcConnection connection = new OdbcConnection(ConnStr);
+            connection.Open();
+            Console.WriteLine(connection.Database);
+            Console.ReadKey();
         }
+
     }
-}
+  }

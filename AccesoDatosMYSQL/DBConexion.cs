@@ -46,9 +46,6 @@ namespace AccesoDatosMYSQL
             
             }
         }
-
-
-         
-        
+ 
     }
 }
